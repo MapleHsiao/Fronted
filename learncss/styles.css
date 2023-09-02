@@ -1,0 +1,66 @@
+/* tag選擇器(大括號+聲明(屬性名稱+屬性內容))*/
+
+p {
+    color: green;
+    font-size: 1.5em;
+}
+
+/* 使用, 一次選擇多個 */
+h1,
+li {
+    color: red;
+}
+
+/* 不同選擇器也能分開管理 */
+li {
+    /* 設定無序清單 */
+    list-style-type: square;
+}
+
+/* class標籤選擇器(tag+.開頭+class) */
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+/*  特定tag的分開設定 
+    li.special {
+        color: orange;
+    }
+    span.special {
+        color: purple;
+    } 
+    */
+
+/* 後裔連接器 descendant combinator (space key) */
+li em {
+    color: rebeccapurple;
+}
+
+/* 相鄰連接器 adjacent sibling combinator (+) */
+h1 + p {
+    font-size: 200%;
+}
+
+/* 依照狀態來指定樣式 (a:) */
+a:link {
+    color: pink;
+    
+}
+
+a:visited {
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+/* 組合選擇器、連結器 */
+body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
